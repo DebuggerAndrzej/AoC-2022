@@ -1,0 +1,10 @@
+[tool.isort]
+line_length = 120
+profile = "black"
+
+[tool.black]
+line-length = 120
+
+[tool.pytest.ini_options]
+python_files = "*.py"
+testpaths = ["python"]

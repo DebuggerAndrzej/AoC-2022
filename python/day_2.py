@@ -33,7 +33,7 @@ def did_player_2_win(player_1: str, player_2: str) -> bool:
 def first_subtask(input_type: str) -> int:
     score = 0
 
-    for single_game in get_input(input_type).split("\n")[:-1]:
+    for single_game in get_input(day=2, type=input_type).split("\n")[:-1]:
         player_1, player_2 = single_game.split(" ")
         score += get_scores_for_game(player_1, player_2)
 
@@ -66,7 +66,7 @@ def get_scores_for_game_with_game_result(player_1: str, game_result: str) -> int
 def second_subtask(input_type: str) -> int:
     score = 0
 
-    for single_game in get_input(input_type).split("\n")[:-1]:
+    for single_game in get_input(day=2, type=input_type).split("\n")[:-1]:
         player_1, game_result = single_game.split(" ")
         score += get_scores_for_game_with_game_result(player_1, map_game_state[game_result])
 

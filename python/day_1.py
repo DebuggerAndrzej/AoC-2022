@@ -2,10 +2,10 @@ import pytest
 from utils import get_input
 
 
-def get_total_carried_per_elf(type: str) -> list[int]:
+def get_total_carried_per_elf(input_type: str) -> list[int]:
     return [
         sum([int(carried_element) for carried_element in elf_backpack.split("\n") if carried_element])
-        for elf_backpack in get_input(type).split("\n\n")
+        for elf_backpack in get_input(day=1, type=input_type).split("\n\n")
     ]
 
 
